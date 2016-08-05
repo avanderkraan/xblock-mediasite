@@ -1,0 +1,109 @@
+<div class="mediasite">
+
+	<div class='wrapper-comp-settings is-active editor-with-buttons' id='settings-tab'>
+
+	    <ul class='list-input settings-list'>
+			<li>
+			<div class="">Browse and select a presentation</div>
+			</li>	
+	        <li class='field comp-setting-entry is-set'>
+	  	      <div class='presentation-header'><b>Student display</b></div>
+	          <div class='wrapper-comp-setting'>
+			    <label class="label setting-label">Presentation display name:</label>
+			    <input class="label setting-input" type='text' name='presentation-name' title='Student friendly name' value='{self.presentation_name}'>
+			    <!-- 
+			    <button class="action setting-clear active" type="button" name="setting-clear" value="Clear" data-tooltip="Clear">
+                   <i id="clear-presentation-name" class="icon fa fa-undo"></i><span class="sr">"Clear Value"</span>
+                </button>
+                -->
+			    <div class="">Students will see this name in the course ribbon and as a header for the video</div>
+			  </div>  
+	          <div class='wrapper-comp-setting'>
+			    <label class="label setting-label">Presentation description</label>
+			    <input class="label setting-input" type='text' name='presentation-description' title='Student friendly description' value='{self.presentation_description}'>
+			    <!-- 
+			    <button class="action setting-clear active" type="button" name="setting-clear" value="Clear" data-tooltip="Clear">
+                   <i id="clear-presentation-description" class="icon fa fa-undo"></i><span class="sr">"Clear Value"</span>
+                </button>
+                -->
+			    <div class="">Students will see this description near the video</div>
+			  </div>
+			</li>
+
+			<li class='field comp-setting-entry is-set'>  
+	  	      <div class='presentation-header'><b>Presentation search</b></div>
+	          <div class='wrapper-comp-setting'>
+	            <label class="label setting-label">Keyword or Course code:</label>
+			    <input id='course-code-input' class='label setting-input' type='text' name='course-code' title='Course code, known to course makers' value='{self.course_code}'>
+			    <button class="action setting-clear active" type="button" value="Search" data-tooltip="Search">
+                   <i id="search-course-code" class="icon fa fa-search-plus">
+                   </i><span class="sr">"Search course code"</span>
+                </button>
+			  </div>
+
+			  <div class='warning'>
+			    <div class='wrapper-comp-setting'>
+			      <label class="label setting-label">Warning:</label>
+			      <div class='warning-message icon fa fa-warning'></div>
+			    </div>
+			  </div>
+
+			  <div class='wrapper-comp-setting'>
+			    <label class="label setting-label">Order by:<span id='ordered' orderby='creation-date' ordertype='desc'></span></label>
+				<button id="presentation-table-anchor"></button>
+				<table id="presentation-table">
+				 <thead>
+				  <tr>
+				     <th class='creation-date'>Creation date <div class='icon fa fa-sort-numeric-asc presentation-order-selector' orderby='creation-date' ordertype='asc'></div>
+				                                             <div class='icon fa fa-sort-numeric-desc presentation-order-selector fa-lg' orderby='creation-date' ordertype='desc'></div>
+				     </th>
+				     <th>Title <div class='icon fa fa-sort-alpha-asc presentation-order-selector' orderby='title' ordertype='asc'></div>
+				               <div class='icon fa fa-sort-alpha-desc presentation-order-selector' orderby='title' ordertype='desc'></div>
+				     </th>
+				  </tr>
+				 </thead>
+				 <tbody id="presentation-cells">{self.presentation_cells}</tbody>
+				</table>
+			  </div>
+			</li>
+
+			  	          
+	        <li class='field comp-setting-entry is-set'>
+	          <div class='mediasite-preview'>
+	          	<div class='wrapper-comp-setting'>
+			      <label class='label setting-label'></label>
+			      <div id='presentation-selector'></div>
+			      <input class='preview-button' type='button' name='preview-button' value='Preview (Note: allow pop-ups on your browser!)'>
+			    </div>
+	          </div>
+			  <div class='mediasite-preview-window'>
+			      <form name='sendpreview' target='mediasite-studio-preview' method='post' action='{self.mediasite_url}'>
+			      </form>
+			  </div>
+			</li>	
+    
+	        <li class='field comp-setting-entry is-set'>
+		      <div class='duration-header'>Set duration for the presentation</div>
+	          <div class='wrapper-comp-setting'>
+				<label class='label setting-label'>Play from (HH:MM:SS)</label>
+			    <input id='c-start-time' class="label setting-input" type='text' name='start-time' title='' value='{self.time_start}'>
+			  </div>
+			  <div class='wrapper-comp-setting'>
+				<label class='label setting-label'>Play until (HH:MM:SS)</label>
+			    <input id='c-end-time' class="label setting-input" type='text' name='end-time' title='' value='{self.time_end}'>
+			  </div>	
+			</li>	
+	    </ul>
+		<div class="xblock-actions">
+	    	<span class='tip setting-help signin-message'>{self.signin_message}</span>
+			<ul>
+			<li class="action-item">
+				<a href="#" class="button action-primary save-button">Save</a>
+			</li>
+			<li class="action-item">
+				<a href="#" class="button cancel-button">Cancel</a>
+			</li>
+			</ul>
+		</div>	
+	</div>
+</div>

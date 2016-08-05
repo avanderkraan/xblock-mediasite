@@ -1,0 +1,24 @@
+/* CSS for mediasite XBlock */
+body.wait, body.wait *{
+	cursor:wait !important;
+}
+
+select#presentation-orderby-selector {
+	width: 27%;
+}
+
+select#presentation-ordertype-selector {
+	width: 18%;
+}
+
+.select-presentation-id:hover {
+	cursor: pointer;
+}
+
+.select-presentation-id-selected {
+	background-color: #6699ff;
+}
+
+th.creation-date {
+	width: 200px;
+}
