@@ -15,7 +15,7 @@ def package_data(pkg, root):
 
 setup(
     name='xblock-mediasite',
-    version='0.1.9.6',
+    version='0.1.9.7',
     description='''
     This XBlock gives the ability to access TU Delft Collegerama where a lot
     of recorded lectures, presentations and live events are stored.

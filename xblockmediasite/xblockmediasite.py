@@ -191,6 +191,7 @@ class XBlockMediasite(XBlock):
         '''
         assert data['check'] == 'presentation_name'
         self.presentation_name = data['presentation_name']
+        self.display_name = self.presentation_name
         return {'presentation_name': self.presentation_name}
 
     @XBlock.json_handler
