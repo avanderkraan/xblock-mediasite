@@ -185,7 +185,7 @@ class XBlockMediasite(XBlock):
     @XBlock.json_handler
     def set_presentation_name(self, data, suffix=''):
         '''
-        Sets the presentation name
+        Sets the presentation name and the course ribbon display_name
         @param data: a dict, contains check and a presentation name
         @return: a dict with a presentation name
         '''
